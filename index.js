@@ -3,8 +3,17 @@ const fs = require("fs");
 
 const express = require('express')
 const app = express()
+const cors = require("cors");
+
 const port = 6969
 
+const corsOptions ={
+  origin:'*',
+  credentials:true,            //access-control-allow-credentials:true
+  optionSuccessStatus:200,
+}
+
+app.use(cors(corsOptions)) // Use this after the variable declaration
 app.use(express.json({limit: '50mb'}));
 app.use(express.urlencoded({limit: '50mb'}));
 
