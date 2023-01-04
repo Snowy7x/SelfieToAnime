@@ -13,6 +13,7 @@ app.get('/', (req, res) => {
 })
 
 app.post('/toAnime', (req, res) => {
+  console.log("Got a request")
   if (req.body.image == null || req.body.image.length == 0) {
       res.status(400).send('Please add an image to your request')
   }else{    
