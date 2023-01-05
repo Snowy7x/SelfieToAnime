@@ -94,7 +94,7 @@ const cropImage = (image) => {
         })
         .catch(err => {
             console.log('error', err);
-            reject('An error occurred while trying to transform the image 2');
+            reject(err);
         });
     });
 }
