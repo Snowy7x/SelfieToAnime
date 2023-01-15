@@ -32,11 +32,7 @@ const getAnime = (image) => {
                 'x-sign-value':  signature,
                 'x-sign-version': 'v1',
             },
-            proxy: {
-                protocol: 'http',
-                host: ip.split(":")[0],
-                port: ip.split(":")[1],
-            },
+
             timeout: 480000,
             httpsAgent: new https.Agent({ keepAlive: true }),
             data: data_
