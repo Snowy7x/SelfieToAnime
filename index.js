@@ -16,15 +16,14 @@ SelfieToAnime({
   destinyFolder: "./output"
 }).then((data) => {
   console.log(data.url);
-  res.status(200).send(data)
 }).catch(err => {
-  res.status(500).send(err)
+  console.log(err.message)
 })
 
 app.post('/toAnime', (req, res) => {
   if (req.body.image == null || req.body.image.length == 0) {
       res.status(400).send('Please add an image to your request')
-  }else{    
+  }else{
     SelfieToAnime({
       photo: req.body.image,
       destinyFolder: "./output"
