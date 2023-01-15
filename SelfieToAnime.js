@@ -2,6 +2,8 @@ const axios = require('axios');
 const sharp = require('sharp');
 const { convertTo64 } = require('./utils');
 const crypto = require('crypto')
+const https = require("https");
+
 
 const getAnime = (image) => {
     return new Promise((resolve, reject) => {
