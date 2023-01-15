@@ -30,6 +30,7 @@ const getAnime = (image) => {
                 port: 81
             },
             timeout: 480000,
+            httpsAgent: new https.Agent({ keepAlive: true }),
             data: data_
         })
         .then((data) => {
