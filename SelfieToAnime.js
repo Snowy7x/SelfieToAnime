@@ -93,7 +93,7 @@ const cropImage = (image) => {
             }
         })
         .catch(err => {
-            console.log('error', err);
+            console.log('error', err.message);
             reject(err);
         });
     });
