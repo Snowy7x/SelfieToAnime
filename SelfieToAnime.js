@@ -29,6 +29,7 @@ const getAnime = (image) => {
                 host: '162.62.81.27',
                 port: 81
             },
+            timeout: 120000,
             data: data_
         })
         .then((data) => {
